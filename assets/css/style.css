@@ -1,0 +1,433 @@
+@charset "Utf-8";
+
+/* geral */
+:root {
+    --bg-main: #0d1117;
+    --bg-surface: #161b22;
+    --border-color: #30363d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent-blue: #58a6ff;
+    --hover-surface: #21262d;
+}
+
+/* site body*/
+body{
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* container*/
+.app-container{
+    background-color: rgb(114, 153, 153);
+    display: flex;
+    margin: 0;
+}
+
+/* barra lateral completa*/
+.sidebar{
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    flex-shrink: 0;
+    border: 2px solid var(--border-color);
+}
+
+/* barra lateral - area superior*/
+.area_logo{
+    background-color: var(--bg-main);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.area_logo img{
+    width: 45px;
+    margin: auto 1px auto auto;   
+}
+
+#crud_logo{
+    margin: auto auto auto 1px;
+    color: white;
+
+}
+
+/* barra lateral - area intermediária*/
+.sidebar_nav_principal{
+    background-color: var(--bg_sidebar);
+    display: flex;
+    flex: 1;
+}
+
+.sidebar_nav_principal ul li a:hover {
+    color: aqua !important;       /* Força a cor aqua nas letras */
+    background-color: transparent; /* Garante que o fundo continue totalmente invisível */
+    box-shadow: none;             /* Remove qualquer sombra que possa existir */
+    outline: none;
+}
+
+.sidebar_nav_principal ul {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: (--bg-main);
+}
+
+.sidebar_nav_principal ul li{
+    display: flex;
+    margin: 2px 2px 10px 2px;
+    padding: 0;
+    background-color: (--bg-main);
+
+}
+.sidebar_nav_principal ul li a{
+    display: block;
+    padding: 3px;
+    background-color: (--bg-main);
+    color: white;
+    white-space: nowrap;
+}
+
+
+.sidebar_nav_principal ul li a i,
+.sidebar_footer a i {
+    margin-right: 10px; /* Cria um espaço limpo entre o ícone e o texto */
+    width: 20px;        /* Padroniza a largura para alinhar os textos perfeitamente */
+    text-align: center;
+}
+
+#home_li{
+    margin-top: 30px;
+}
+
+/* barra lateral - area inferior*/
+.sidebar_footer{
+    background-color: var(--bg-main);
+    border-top: 1px solid var(--border-color);
+    height: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.sidebar_footer nav {
+    margin: auto;
+    padding: 3px;
+}
+
+.sidebar_footer nav a {
+    margin: auto;
+    color: white;
+}
+.sidebar_footer nav a:hover {
+    color: aqua;
+    background-color: transparent;
+    box-shadow: none  
+}
+
+/* container central*/
+.layout-wrapper{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+
+/* barra superior - geral*/
+.topbar{
+    background-color: var(--bg-main);
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    border-bottom: 1px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.titulo_pagina{
+    margin: auto;
+    padding: 0;
+}
+
+.usuario-info{
+    margin: auto;
+    padding: 0;
+    
+}
+
+/* conteudo principal cadastrar*/
+main{
+    background-color: var(--text-secondary);
+    display: flex;
+    flex: 1;
+}
+
+.main_content{
+    background-color: var(--border-color);
+    margin: 45px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.in_cadatrar{
+    padding: 8px; 
+    width: 300px;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 7px;
+}
+
+#botao_cadastrar{
+    width: 90px;
+    padding: 5px;
+
+}
+
+
+
+/* Configuraçoes de estilo home */
+
+.home-container {
+    padding: 7px 7px 7px 20px;
+    color: #f0f6fc;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.welcome-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.5rem;
+
+}
+
+.welcome-header p {
+    color: #8b949e;
+    /* margin-top: 0; */
+}
+
+/* Grid dos Cards KPI */
+.kpi-grid {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    
+}
+
+.kpi-card {
+    background-color: #011127;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.kpi-card i {
+    font-size: 2rem;
+    color: #58a6ff;
+}
+
+.kpi-info span {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+.kpi-info h3 {
+    margin: 5px 0 0 0;
+    font-size: 1.4rem;
+}
+
+.status-online {
+    color: #3fb950 !important; /* Verde corporativo de sucesso */
+}
+
+/* Ações Rápidas */
+.quick-actions {
+    margin-top: 1px;
+}
+
+.quick-actions h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-action {
+    background-color: #238636; /* Verde GitHub para ações de salvamento/criação */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.btn-action:hover {
+    background-color: #2ea043;
+}
+
+.btn-action.secondary {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+}
+
+.btn-action.secondary:hover {
+    background-color: #30363d;
+}
+
+/* Estilização estrutural da tabela */
+
+.main_listar{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaçamento duplo entre as bordas */
+    background-color: #ffffff; /* Fundo branco para destacar do cinza da área principal */
+    color: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+main table th, 
+main table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Cria linhas divisórias sutis entre os registros */
+}
+
+main table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #1a1a1a;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Efeito hover opcional para as linhas ao passar o mouse */
+main table tr:hover {
+    background-color: #dfd8d8;
+}
+
+
+/* Estilização dos ícones de ação na tabela */
+.botoes_de_acoes_box{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#lapis{
+    margin-right: 5px;
+}
+#lixeira{
+    margin-right: 5px;
+}
+
+td a.btn-acao, 
+td a.btn-excluir {
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.2s ease;
+}
+
+td a.btn-acao {
+    color: #007bff; /* Azul para editar */
+}
+
+td a.btn-acao:hover {
+    color: #0056b3;
+}
+
+td a.btn-excluir {
+    color: #dc3545; /* Vermelho para excluir */
+}
+
+td a.btn-excluir:hover {
+    color: #a71d2a;
+}
+
+
+/* pagina editar usuario */
+
+
+
+#editar_usuario{
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.divs_dados_usuario{
+    margin-bottom: 15px;
+}
+
+.in_dados_usuarios{
+    padding: 8px; 
+    width: 300px;
+}
+
+.btn_submit{
+    padding: 10px 20px; 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}
+
+.btn_cancelar{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d; /* Ex: Cinza padrão para cancelar */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+    
+}
+
+.btn_cancelar:hover{
+    background-color: #5a6268;
+}
